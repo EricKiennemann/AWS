@@ -18,7 +18,7 @@
 	* send the private key from the local PC to the public instance (using filezilla via sftp)
         * connect to public instance via putty
 	* change the rights on the key file: chmod 400 S20KEYPAIR2EK.pem
-	* connect to private instance with ssh : ssh -i "S20KEYPAIR2EK.pem" ec2-user@52.87.166.18
+	* connect to private instance with ssh : ssh -i "S20KEYPAIR2EK.pem" ec2-user@10.0.2.25
 	* after accepting the key fingerprint, connected to the machine !
 	* and "ping www.google.com"	
 	
