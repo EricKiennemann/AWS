@@ -5,7 +5,7 @@
 \* the security group is modified to accept only ssh/22 from the public
 subnet : 10.0.1.0/24
 
-![](/media/image1.png){width="3.266949912510936in"
+![Alt text](/media/image1.png){width="3.266949912510936in"
 height="1.8501607611548556in"}
 
 **Install the NAT instance on the public subnet**
