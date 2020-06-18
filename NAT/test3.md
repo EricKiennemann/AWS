@@ -22,13 +22,15 @@
 
   - Hgfgh
 
-![](./NAT/media/image1.png)
+![](.//media/image1.png)
 
 **Gras**
 
 <span class="underline">Souligné</span>
 
 Tabulation
+
+![](.//media/image2.png)
 
 Ceci est un texte de plusieurs lignes gfdhjhk hhjkhjk hkhkhk hkjhkhk
 hkhkhk hkjkhk hkkhkhk hjkhkhk hkhjkhk hkjkhkhk hkhkhk jkhkhk hkhkh khkh
