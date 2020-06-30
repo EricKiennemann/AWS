@@ -4,7 +4,7 @@
 
 ![](.//media/image1.png)
 
-And enable the public accès to this Bucket
+And enable the public acces to this Bucket
 
 ![](.//media/image2.png)
 
