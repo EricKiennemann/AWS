@@ -2,7 +2,7 @@
 
 ## Framework : 
 
-We have to subnet :
+We have tWo subnet :
 
   - Subnet 1 : which is public. One instance (I1) and connected to an
     internet gateway :
