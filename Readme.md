@@ -19,3 +19,11 @@ WorkbenchMysql and do database operation on it
 
 Acces to the RDS MySqlDatabase from Python and do database operation on
 it
+
+## Apache Web Server
+
+Install Apache Web Server and PHP and add a simple web page that print the public IP adress of the instance
+
+## Application Load Balancer
+
+Install a second Apache Web Server on a different instance with the same web page. Add those two servers to an Application Load Balancer
