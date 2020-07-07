@@ -6,7 +6,7 @@ Build public and private subnet and add a NAT instance on the public
 subnet in order to be able to « connect » to the internet (ping
 google.com) from the private subnet using the NAT instance
 
-## [Amazon S3]('Amazon S3'/Readme.md)
+## [Amazon S3](Amazon%20S3/Readme.md)
 
 Create an Amazon S3 bucket and use it to host a static web age
 
