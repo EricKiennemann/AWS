@@ -1,7 +1,7 @@
 # Summary
 
-## NAT
-[a relative link](NAT/Readme.md)
+## [NAT](NAT/Readme.md)
+
 Build public and private subnet and add a NAT instance on the public
 subnet in order to be able to « connect » to the internet (ping
 google.com) from the private subnet using the NAT instance
