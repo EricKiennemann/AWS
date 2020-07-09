@@ -27,3 +27,15 @@ Install Apache Web Server and PHP and add a simple web page that print the publi
 ## [Application Load Balancer](ApplicationLoadBalancerALB/Readme.md)
 
 Install a second Apache Web Server on a different instance with the same web page. Add those two servers to an Application Load Balancer
+
+## [User Data](UserData/Readme.md)
+
+Launch an EC2 instance using the UserData functionality to install automatically an Apache server and create a.php file
+
+## [Copy S3 File to EC2 using a  Script](CopyS3FileToEC2Script/Readme.md)
+
+Launch an EC2 server using UserData functionnality : install a Apache web server and copy a S3 .php file to this instance 
+
+## [Launch EC2 Instance with a Python code](LaunchEC2withPython/Readme.md)
+
+Launch an EC2 server from a Python code : install a Apache web server and copy a S3 file to this instance using UserData functionnality
