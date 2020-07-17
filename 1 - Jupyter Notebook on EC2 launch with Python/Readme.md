@@ -13,10 +13,15 @@ ec2 = boto3.resource('ec2',region_name='us-east-1')
 
 # prepare the user_data script that will, install the jupyter notebook on the server
 user_data = '''#!/bin/bash
+
 sudo apt -y update
+
 sudo apt -y install python3-pip python3-dev
+
 sudo -H pip3 install --upgrade pip
+
 sudo -H pip3 install virtualenv
+
 pip install jupyter'''
 
 # launch the EC2 instance with the following parameters
@@ -31,34 +36,51 @@ instanceId = instance[0].instance_id
 
 # Start a wait loop to wait for the end of the installation of the instance
 start = now = time()
+
 instanceStatus = ''
+
 Ok = False
+
 while (now - start < 100) and (Ok == False):
-    try:
-        # get theinstance status to see if the installation is finished
+
+try:
+# get theinstance status to see if the installation is finished
         status = ec2.meta.client.describe_instance_status(InstanceIds=[instanceId])['InstanceStatuses']
-    except:
-        pass
-    try:
-        instanceStatus = status[0]['SystemStatus']['Status']
-    except:
-        pass
-    #print(instanceStatus)
-    if instanceStatus == 'ok':
-        Ok = True
-    now = time()
+   
+   except:
+   
+   pass
+   
+   try:
+   
+   instanceStatus = status[0]['SystemStatus']['Status']
+   
+   except:
+   
+   pass
+   
+   if instanceStatus == 'ok':
+
+Ok = True
+
+now = time()
 
 # get the public dns name of the instance
 ec2c = boto3.client('ec2',region_name='us-east-1')
+
 response = ec2c.describe_instances(InstanceIds=[instance[0].instance_id])
+
 dns = response['Reservations'][0]['Instances'][0]['PublicDnsName']
 
 user_dns = 'ubuntu@' + dns
 
 # Wait 60s before trying to connect to the instance (To be improved)
 start = now = time()
+
 while (now - start < 60):
-    now = time()
+
+now = time()
+
 print('after wait')
 
 # Connect with ssh : Create a SSH local port forward to port 8889
