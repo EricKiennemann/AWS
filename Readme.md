@@ -1,5 +1,12 @@
 # Summary
 
+## [Project 1 - Jupyter Notebook on EC2 launch from Python Code](NAT/Readme.md)
+
+Write Pyhon code to be able to AUTOMATICALLY :
+* create an EC2 instance with Jupyter Notebook server installed on it
+* connect to this Jupyter Notebook server from a local PC
+* launch Jupyer Notebook on a webbrowser on the local PC
+
 ## [NAT](NAT/Readme.md)
 
 Build public and private subnet and add a NAT instance on the public
