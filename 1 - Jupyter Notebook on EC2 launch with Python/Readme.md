@@ -1,8 +1,12 @@
 ### THIS CODE IS WORKING BUT STILL IN PROGRESS
   import os
+  
   import subprocess
+  
   import boto3
+  
   import webbrowser
+  
   from time import time
 # create the EC2 ressource for the authorized region, here us-east-1
 ec2 = boto3.resource('ec2',region_name='us-east-1')
