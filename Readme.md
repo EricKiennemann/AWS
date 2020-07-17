@@ -1,6 +1,6 @@
 # Summary
 
-## [Project 1 - Jupyter Notebook on EC2 launch from Python Code](NAT/Readme.md)
+## [Project 1 - Jupyter Notebook on EC2 launch from Python Code](1%20-%20Jupyter%20Notebook%20on%20EC2%20launch%20with%20Python/Readme.md)
 
 Write Pyhon code to be able to AUTOMATICALLY :
 * create an EC2 instance with Jupyter Notebook server installed on it
