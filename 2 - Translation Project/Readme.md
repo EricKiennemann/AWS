@@ -1,1 +1,1 @@
-![](.//projectTranslation.png)
+![](.//translation.png)
