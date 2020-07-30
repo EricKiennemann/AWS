@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Hearing Translation</title>
+    <!-- Add some CSS to change client UI -->
+    <style>
+    body {
+        background-color: #232F3E;
+        }
+    label, button {
+        color: #FF9900;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        margin-left: 40px;
+        }
+     input {
+        color: #232F3E;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        margin-left: 20px;
+        }
+    </style>
+    <script>
+        // define the callAPI function that takes a text and call the AWS API gateway to translate the text in english and transform it to voice
+        var callAPI = (fText)=>{
+            // instantiate a headers object
+            var myHeaders = new Headers();
+            // add content type header to object
+            myHeaders.append("Content-Type", "application/json");
+            // using built in JSON utility package turn object to string and store in a variable
+            var raw = JSON.stringify({"review":fText});
+            // create a JSON object with parameters for API call and store in a variable
+            var requestOptions = {
+                method: 'POST',
+                headers: myHeaders,
+                body: raw,
+                redirect: 'follow'
+            };
+            // make API call with parameters and use promises to get response
+            fetch("https://xbwspsrcy8.execute-api.us-east-1.amazonaws.com/dev", requestOptions)
+            .then(response => response.text())
+            .then(result => {
+				// call soundFile function to read the mp3 file
+				var soundFile = document.createElement("audio");
+				soundFile.preload = "auto";
+				var src = document.createElement("source");
+				src.src = JSON.parse(result).body.slice(1,JSON.parse(result).body.length - 1)
+				soundFile.appendChild(src);
+				soundFile.load();
+				soundFile.volume = 0.500000;
+				soundFile.play();   
+			})
+            .catch(error => console.log('error', error));
+		}
+    </script>
+</head>
+<body>
+    <form>
+        <label>Type your text in french :</label>
+        <input type="text" id="fText" style = "width: 400px;">
+        <!-- set button onClick method to call function we defined passing input values as parameters -->
+        <button type="button" onclick="callAPI(document.getElementById('fText').value)">Translate</button>
+    </form>
+</body>
+</html>
