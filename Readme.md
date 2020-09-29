@@ -22,7 +22,7 @@ Create an Amazon S3 bucket and use it to host a static web age
 Create an Amazon RDS database using mySql. Access to it with
 WorkbenchMysql and do database operation on it
 
-## [RDS MySql Database - Python](RDSmySqlWithPython/Readme.md)
+## [RDS MySql Database - Python](RDSmySqlWithPython/Readme.md) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/EricKiennemann/AWS/master?filepath=%2FRDSmySqlWithPython%2FRDBmySqlv0.ipynb)
 
 Acces to the RDS MySqlDatabase from Python and do database operation on
 it
